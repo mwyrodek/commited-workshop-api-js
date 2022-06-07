@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Workshop for commited",
   "scripts": {
-    "test": "dotenv -e .env -- npx mocha ./supertest/"
+    "test": "dotenv -e .env -- npx mocha ./supertest/",
+    "test:testenv": "dotenv -e .env.test -- npx mocha ./supertest/"
   },
   "repository": {
     "type": "git",

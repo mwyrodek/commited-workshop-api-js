@@ -1,8 +1,11 @@
 const request = require('supertest')(process.env.URL)
 const { expect } = require('chai')
 
+require('dotenv').config();
+
 describe('Login Test', () =>{
     it('Check empty login call is returning 403 forbidden', async ()=>{
+        console.log(process.env.LOGIN)
         const response = await request.post('/wp-json/jwt-auth/v1/token').send();
 
         expect(response.status).to.eql(403)
@@ -15,7 +18,7 @@ describe('Login Test', () =>{
 
     it('Happy path user get token', async ()=>{
         const response = await request.post('/wp-json/jwt-auth/v1/token')
-            .send({username: 'wyrodek.maciej+commited@gmail.com', password: 'D6OO8NeM!#8bC&17%x5UbS9$'});
+            .send({username: process.env.LOGIN, password:  process.env.PASSWORD });
 
         expect(response.status).to.eql(200)
     })
