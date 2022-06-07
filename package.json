@@ -1,0 +1,26 @@
+{
+  "name": "commited-api-workshop",
+  "version": "0.0.1",
+  "description": "Workshop for commited",
+  "scripts": {
+    "test": "npx mocha ./supertest/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mwyrodek/commited-workshop-api-js.git"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "Maciej Wyrodek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mwyrodek/commited-workshop-api-js/issues"
+  },
+  "homepage": "https://github.com/mwyrodek/commited-workshop-api-js#readme",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "supertest": "^6.2.3"
+  }
+}
