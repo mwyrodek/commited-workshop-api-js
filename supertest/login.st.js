@@ -21,5 +21,7 @@ describe('Login Test', () =>{
             .send({username: process.env.LOGIN, password:  process.env.PASSWORD });
 
         expect(response.status).to.eql(200)
+        expect(response.body.data.id).to.eql(19)
+        expect(response.body.data.token.length).to.greaterThan(30)
     })
 })
