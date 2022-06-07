@@ -1,4 +1,4 @@
-const request = require('supertest')('https://wyrodek.pl/workshop/api')
+const request = require('supertest')(process.env.URL)
 const { expect } = require('chai')
 
 describe('Login Test', () =>{
